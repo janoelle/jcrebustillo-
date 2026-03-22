@@ -1,0 +1,141 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #F7DFDF, #EBD7CE); /* blush + nude */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card-container {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 700px;
+  height: 480px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  transform-origin: center center; /* smooth flip */
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 28px;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+  padding: 40px;
+  border: 3px solid #836871; /* old lavender/charcoal accent */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-front {
+  background: #EBD7CE; /* nude */
+  color: #4a2c5f;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #A37E84, #917F88); /* plum + taupe gray */
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.header-box {
+  background: #F7DFDF; /* blush */
+  color: #4a2c5f;
+  font-weight: 700;
+  font-size: 34px;
+  text-align: center;
+  padding: 14px 28px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 14px rgba(0,0,0,0.1);
+}
+
+.name {
+  font-size: 46px;
+  font-weight: 900;
+  color: #A37E84; /* plum accent */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.info p {
+  font-size: 22px;
+  margin: 8px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 20px;
+  font-weight: bold;
+  border-top: 2px solid #A37E84;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 22px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #917F88; /* taupe gray button */
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button:hover {
+  background: #5a3a44; /* maroon/charcoal mix */
+}
+
+.card-back h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.card-back li {
+  font-size: 26px;   /* bigger hobbies font */
+  font-weight: 600;
+  color: #F7DFDF;    /* blush accent for hobbies */
+  margin: 8px 0;
+}
+
+.quote-box {
+  background: #CDADAB; /* silver pink/nude tone */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;        /* stays inside template */
+  max-width: 600px;  /* never exceeds card */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.quote {
+  font-family: "Brush Script MT", cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff; /* white text for contrast */
+    }
